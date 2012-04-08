@@ -1,16 +1,16 @@
 package com.exoplatform.testtask.qname;
 
-import java.util.logging.*;
-import java.io.*;
-
+/** Description of IllegalNameException. 
+*The IllegalNameException class 
+*extends the {@link java.lang.Exception}.  
+*It generates IllegalNameException
+* @author Valeriy Svydenko
+* @version 1.0 Build April 8, 2012.
+*/
 public class IllegalNameException extends Exception {
-	private static Logger logger = Logger.getLogger("IllegalNameException");
-	IllegalNameException(){
-		StringWriter trace = new StringWriter();
-		printStackTrace(new PrintWriter(trace));
-		logger.severe(trace.toString());
-	}
+	IllegalNameException(){}
 	IllegalNameException(String msg){
 		super(msg);
 	}
 }
+

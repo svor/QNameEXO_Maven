@@ -4,10 +4,22 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/** Description of ParserTest 
+*The ParserTest class  
+* @author Valeriy Svydenko
+* @version 1.0 Build April 8, 2012.
+*/
 public class ParserTest {
-
+	/**
+	 * 
+	 *tester is object to parse the name 
+	 */
 	Parser tester = new Parser();
-	
+
+	/**
+	 * Check a input name.
+	 * @result the name is a pattern
+	 */
 	@Test
 	public void testIsNameVersion1() {
 		assertTrue(tester.isName("name"));
@@ -15,12 +27,20 @@ public class ParserTest {
 		assertTrue(tester.isName("prefix:na me"));
 	}
 
+	/**
+	 * Check a input name.
+	 * @result the name is a pattern
+	 */
 	@Test
 	public void testIsNameVersion2() {
 		assertTrue(tester.isName("n:uyuh6768hiu"));
 		assertTrue(tester.isName("pref_1x:naїїїьу"));
 	}
 	
+	/**
+	 * Check a input name.
+	 * @result the name is not a pattern
+	 */
 	@Test
 	public void testIsNameVersion3() {
 		assertFalse(tester.isName(""));
@@ -31,6 +51,10 @@ public class ParserTest {
 		
 	}
 	
+	/**
+	 * Check a input name.
+	 * @result the name is not a pattern
+	 */
 	@Test
 	public void testIsNameVersion4() {
 		assertFalse(tester.isName(" name"));
